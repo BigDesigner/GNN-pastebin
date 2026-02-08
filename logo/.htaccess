@@ -1,0 +1,22 @@
+# Disable directory browsing
+Options -Indexes
+
+# Deny access to all files
+Order deny,allow
+Deny from all
+
+# Allow only SVG files to be served
+<FilesMatch "\.svg$">
+    Allow from all
+</FilesMatch>
+
+# Disable script execution (PHP, etc.)
+<IfModule mod_php5.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
