@@ -1,6 +1,9 @@
 # User uploads
-/file/
+/file/*
+!/file/.htaccess
+
 # Blacklist
 blacklist.txt
+
 # MacOS
 .DS_Store

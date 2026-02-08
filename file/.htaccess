@@ -1,0 +1,7 @@
+# .htaccess file content
+
+# Block access to specific file types
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|sql|data|meta|txt)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
