@@ -1,0 +1,148 @@
+/* Google Fonts - Inter & Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap');
+
+:root {
+    /* Refined Color Palette - Slate & Amber Gold */
+    --primary: #f59e0b;
+    --primary-light: #fbbf24;
+    --primary-dark: #d97706;
+    --bg-dark: #0f172a;
+    /* Deep Slate */
+    --card-bg: rgba(30, 41, 59, 0.7);
+    /* Slate 800 with opacity */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(30, 41, 59, 0.1) 0px, transparent 50%);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.font-bold {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Refined */
+.glass-panel {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Smooth Navigation */
+nav {
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* Version Tag Style */
+.version-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 20px;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--primary);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* Input Styles - More consistent with the theme */
+.form-input,
+.form-textarea,
+.form-select {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1) !important;
+    outline: none;
+    background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* Buttons - Premium Feel */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Custom Scrollbar - Minimalist LUX */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Amber SVG Filter */
+.amber-svg {
+    filter: invert(70%) sepia(90%) saturate(800%) hue-rotate(360deg) brightness(100%) contrast(105%);
+}
+
+/* Highlight.js Dark Theme Polish */
+pre code.hljs {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-radius: 16px;
+    padding: 2rem !important;
+    border: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}

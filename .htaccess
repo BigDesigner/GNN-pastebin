@@ -1,0 +1,20 @@
+# Environment Variables for GNNpaste
+SetEnv ADMIN_USERNAME your_admin_username
+SetEnv ADMIN_PASSWORD your_admin_password
+SetEnv RECAPTCHA_SITE_KEY your_recaptcha_site_key
+SetEnv RECAPTCHA_SECRET_KEY your_recaptcha_secret_key
+SetEnv ENCRYPTION_KEY your_encryption_key_here
+
+# Protect sensitive files
+<FilesMatch "\.(htaccess|php|txt|meta|data)$">
+    # Note: We allow access to certain .php files publicly to let the app work
+</FilesMatch>
+
+# Specifically block access to blacklist, config and readme
+<FilesMatch "^(blacklist\.txt|config\.php|Readme\.txt)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes

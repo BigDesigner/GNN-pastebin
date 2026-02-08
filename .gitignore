@@ -1,0 +1,6 @@
+# User uploads
+/file/
+# Blacklist
+blacklist.txt
+# MacOS
+.DS_Store
